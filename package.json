@@ -1,0 +1,23 @@
+{
+  "name": "amazon-isbn-copy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "run-p -cl --aggregate-output lint:fmt:check lint:oxlint",
+    "lint:fix": "run-p -cl --aggregate-output lint:fmt lint:oxlint:fix",
+    "lint:fmt": "oxfmt",
+    "lint:fmt:check": "oxfmt --check",
+    "lint:oxlint": "oxlint",
+    "lint:oxlint:fix": "oxlint --fix",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3",
+    "npm-run-all2": "9.0.4",
+    "oxfmt": "0.75.0",
+    "oxlint": "1.90.0",
+    "vitest": "^5.0.5"
+  },
+  "packageManager": "pnpm@12.16.1"
+}

@@ -18,6 +18,18 @@ After a successful copy, a small "Copy success!" badge appears in the top-right 
 
 After editing the source, click the reload button for the extension on `chrome://extensions`, then reload the Amazon page.
 
+## Development
+
+Node.js and pnpm versions are pinned in `mise.toml`.
+
+```bash
+mise install
+pnpm install
+pnpm lint      # oxfmt --check and oxlint
+pnpm lint:fix  # apply formatting and lint fixes
+pnpm test      # Vitest with jsdom
+```
+
 ## Files
 
 - `manifest.json`: extension manifest (Manifest V3)

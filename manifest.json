@@ -3,9 +3,7 @@
   "name": "Amazon ISBN Copy",
   "version": "1.2",
   "description": "Copies the ISBN-13 of a book on Amazon (.co.jp, .com, .co.uk) to the clipboard",
-  "permissions": [
-    "clipboardWrite"
-  ],
+  "permissions": ["clipboardWrite"],
   "icons": {
     "128": "icon.png"
   },
@@ -19,9 +17,7 @@
         "https://www.amazon.com/*",
         "https://www.amazon.co.uk/*"
       ],
-      "js": [
-        "content.js"
-      ]
+      "js": ["content.js"]
     }
   ],
   "background": {

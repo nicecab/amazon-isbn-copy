@@ -1,15 +1,15 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: ['config:recommended', 'group:recommended'],
-  timezone: 'Asia/Tokyo',
-  schedule: ['before 8am on Saturday'],
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:recommended", "group:recommended"],
+  timezone: "Asia/Tokyo",
+  schedule: ["before 8am on Saturday"],
   prConcurrentLimit: 5,
   platformAutomerge: true,
-  automergeStrategy: 'squash',
+  automergeStrategy: "squash",
   // Security fixes skip the schedule and the PR limits; automerge them once the checks pass (majors included)
   // so an advisory never waits for a manual merge. OSV adds advisories GitHub has not imported yet.
   vulnerabilityAlerts: {
-    labels: ['security'],
+    labels: ["security"],
     automerge: true,
     // CI only validates manifest.json and is not a required check: merge without waiting for checks (the owner's choice).
     ignoreTests: true,
@@ -18,16 +18,16 @@
   osvVulnerabilityAlerts: true,
   packageRules: [
     {
-      description: 'Auto-merge non-major updates',
-      matchUpdateTypes: ['patch', 'minor', 'pin', 'pinDigest', 'digest'],
+      description: "Auto-merge non-major updates",
+      matchUpdateTypes: ["patch", "minor", "pin", "pinDigest", "digest"],
       automerge: true,
-      groupName: 'non-major dependencies',
+      groupName: "non-major dependencies",
     },
     {
-      description: 'Major updates stay in their own PR for review',
-      matchUpdateTypes: ['major'],
+      description: "Major updates stay in their own PR for review",
+      matchUpdateTypes: ["major"],
       automerge: false,
-      labels: ['dependencies', 'breaking'],
+      labels: ["dependencies", "breaking"],
     },
   ],
 }
