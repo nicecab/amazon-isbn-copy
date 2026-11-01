@@ -1,11 +1,5 @@
 function getXPathText(xpath) {
-  const iterator = document.evaluate(
-    xpath,
-    document,
-    null,
-    XPathResult.ANY_TYPE,
-    null
-  );
+  const iterator = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
   const node = iterator.iterateNext();
   return node ? node.textContent : "";
 }
