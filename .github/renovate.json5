@@ -4,6 +4,7 @@
   timezone: "Asia/Tokyo",
   schedule: ["before 8am on Saturday"],
   prConcurrentLimit: 5,
+  minimumReleaseAge: "30 days",
   platformAutomerge: true,
   automergeStrategy: "squash",
   // Security fixes skip the schedule and the PR limits; automerge them once the checks pass (majors included)
